@@ -94,36 +94,58 @@
 //     }
 // }
 
-function walkDog() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("you walk the dog"); 
-        }, 1500)
-    })
-}
+// function walkDog() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("you walk the dog"); 
+//         }, 1500)
+//     })
+// }
 
-function cleanKitchen() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("you cleaned the kitchen"); 
-        }, 2500)
-    })
-}
+// function cleanKitchen() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("you cleaned the kitchen"); 
+//         }, 2500)
+//     })
+// }
 
-function takeOutTrash() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("you took out the trash");  
-        }, 1000)
-    })
-}
+// function takeOutTrash() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("you took out the trash");  
+//         }, 1000)
+//     })
+// }
 
-walkDog()       
-    .then(value => {console.log(value); return cleanKitchen()})
-    .then(value => {console.log(value); return takeOutTrash()})
-    .then(value => {console.log(value); 
-    console.log("all chores are complete!")})
-    .catch((error) => console.error(error))
 
+// async function doChores() {
+//     try {
+//         const taskOne = await walkDog(); 
+//         console.log(taskOne); 
+
+//         const taskTwo = await cleanKitchen(); 
+//         console.log(taskTwo); 
+
+//         const taskThree = await takeOutTrash(); 
+//         console.log(taskThree); 
+
+//         console.log("all chores are completed!")
+//     } 
+//     catch (error) {
+//         console.error(error)
+//     }
+// }
+
+// doChores()
+
+
+console.log("Start"); 
+
+setTimeout(() => console.log("Timeout"), 0); 
+
+Promise.resolve().then(() => console.log("Promise resolved")); 
+
+console.log("End"); 
 
   
